@@ -4,10 +4,10 @@ print(lis)
 lis[1] = 2  #trocar o numero 1 da lista pelo 2
 print(lis)
 
-lis.append(2) #adicionar o valor 7 ao final lista
+lis.append(2) #adicionar o valor 2 ao final lista
 print(lis)
 
-lis.sort() #em oredem crescenti 
+lis.sort() #em ordem crescenti 
 print(lis)
 
 lis.sort(reverse=True) #em oredem descrecenti 
