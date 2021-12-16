@@ -17,6 +17,7 @@ else:
 print()
 print(aluno)
 print()
+
 for k,v in aluno.items():
     print(f'{k} é igual a {v}')
 print('Fim do Programa')
