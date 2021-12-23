@@ -14,7 +14,7 @@ while True:
         gol = int(input(f'  Quantos Gols na Partida {i}: '))
         gols.append(gol)
     jogador['Gols'] = gols[:]
-    jogador['Total de Gols'] = sum(gols)
+    jogador['T. Gols'] = sum(gols)
     time.append(jogador.copy())
     resp = str(input('Quer Continua [S/N]: ')).upper()[0].strip()
     while resp not in 'NS':
