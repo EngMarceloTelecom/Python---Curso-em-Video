@@ -42,6 +42,6 @@ print('D) Nomes com Idades a Cima da Media')
 for p in grupo:
     if p['Idade'] >= media:
         for k, v in p.items():
-            print(f'{k} = {v}', end=' ')
+            print(f'{v}')
 
 print('<<FIM>>')
