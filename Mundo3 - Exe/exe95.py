@@ -4,31 +4,45 @@ jogador = {}
 gols = []
 time = []
 while True:
-    nome = str(input('Nome do Jogador: '))
+    jogador.clear()
+    nome = str(input('Nome do Jogador: ')).upper()
     partidas = int(input('Quantas Partidas Jogadas: '))
     jogador['Jogador'] = nome
     jogador['Partidas'] = partidas
+    gols.clear()
     for i in range(1, partidas+1):
         gol = int(input(f'  Quantos Gols na Partida {i}: '))
         gols.append(gol)
     jogador['Gols'] = gols[:]
-    #gols.clear()
     jogador['Total de Gols'] = sum(gols)
     time.append(jogador.copy())
-    #time.clear()
     resp = str(input('Quer Continua [S/N]: ')).upper()[0].strip()
     while resp not in 'NS':
         resp = str(input('Erro!!! Responta S ou N: ')).upper()[0].strip()
     if resp == 'N':
         break
+print('='*60)
+print('cod ', end='')
+for i in jogador.keys():
+    print(f'{i:<15}', end='')
+print()
+for k, v in enumerate(time):
+    print(f'{k:>3} ', end='')
+    for d in v.values():
+        print(f'{str(d):<15}',end='')
+    print()
+print('='*60)
+while True:
+    busca = int(input('Mostrar dados de qual Jogador [cod], (99 para sair): '))
+    if busca == 99:
+        break
+    if busca >= len(time):
+        print(f' ERRO.. Não Existe Jogador com esse cod {busca}')
+    else:
+        print('='*60)
+        print(f'Levantamento do {time[busca]["Jogador"]}')
+        for i, g in enumerate(time[busca]["Gols"]):
+            print(f'No jogo {i+1} fez {g} gols')
+    print('='*60)
+print('=== FIM ===')
 
-print('='*50)
-print(time)
-print('='*50)
-
-'''for k,v in jogador.items():
-    print(f'{k} {v}')
-print('='*50)
-for i, v in enumerate(gols):
-    print(f'Na partida {i+1} o Jogador {nome} fez {v} Gols')
-print('FIM\n')'''
