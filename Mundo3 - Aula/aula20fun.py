@@ -7,8 +7,8 @@ linha()
 def titulo(txt):
     print(txt)
     print('='*30)
-#titulo(str(input('Nome: ')))
-titulo('python')
+#nome = str(input(''))
+titulo(nome)
 
 linha()
 def soma(a, b):
